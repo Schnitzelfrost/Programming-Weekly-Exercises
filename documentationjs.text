@@ -1,0 +1,8 @@
+Closure/scoped (functions within a function)
+Keeping variables/references to a scope/frame/lexical environment
+Use case: variables that you pass through functions, and then can be accessed by other functions.
+https://www.youtube.com/watch?v=3a0I8ICR1Vg
+https://www.youtube.com/watch?v=Ys9VxrJjAyU
+
+
+
