@@ -94,10 +94,6 @@ This has one paramter less, as we know who is "passing" the ball from the
 so the version above should look very strange to you if you have not done 
 any Javascript before!
 
-
-
-
-
 Just for fun/confusion, here is a version of the function 
 written using the "arrow" syntax.
 
