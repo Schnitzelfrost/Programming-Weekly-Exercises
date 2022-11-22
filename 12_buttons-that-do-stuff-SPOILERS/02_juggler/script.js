@@ -41,18 +41,15 @@ function juggleBackward() {
 // Add behaviour to the second button, we want to pass on the ball to the first button:
 secondButton.addEventListener("pointerdown", juggleBackward);
 
-
-
-
 /****************************************
  * Challenge!
- * 
+ *
  * Re-write the listener functions to take two arguments:
  *   1. The button to pass from
  *   2. The button to pass to
- * 
+ *
  * And use it instead of two dedicated functions.
- * HINT: The function will have to return a function in order to 
+ * HINT: The function will have to return a function in order to
  *       work as a listener.
  */
 
@@ -60,7 +57,7 @@ function ambidextrousJuggler(from, to) {
   return function () {
     from.innerHTML = "";
     to.innerHTML = ball;
-  }
+  };
 }
 
 /* You would use this function in the following way:

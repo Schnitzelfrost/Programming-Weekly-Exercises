@@ -16,9 +16,21 @@ function juggleBackward() {
   secondButton.innerHTML = "";
 }
 
-firstButton.addEventListener("pointerdown", juggleForward);
-secondButton.addEventListener("pointerdown", juggleBackward);
+function switcher(state1, state2) {
+  return function () {
+    state1.innerHTML = "";
+    state2.innerHTML = "🥎";
+  };
+}
 
+firstButton.addEventListener(
+  "pointerdown",
+  switcher(firstButton, secondButton)
+);
+secondButton.addEventListener(
+  "pointerdown",
+  switcher(secondButton, firstButton)
+);
 /****************************************
  * Challenge!
  *
