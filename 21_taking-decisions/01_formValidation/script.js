@@ -1,21 +1,24 @@
-/* 
+/*
  * 1. Form Validation
- * 
+ *
  * We will go over this code in class, with a live demo.
  * TASK: annotate the code with comments, explaning each line in your own words.
- * 
+ *
  */
 
 const inputUsername = document.querySelector("#form-validation-username");
-const feedbackUsername = document.querySelector("#form-validation-feedback-username");
+const feedbackUsername = document.querySelector(
+  "#form-validation-feedback-username"
+);
 let usernameCorrect = false;
 
 const inputPassword = document.querySelector("#form-validation-password");
-const feedbackPassword = document.querySelector("#form-validation-feedback-password");
+const feedbackPassword = document.querySelector(
+  "#form-validation-feedback-password"
+);
 let passwordCorrect = false;
 
 const inputSubmit = document.querySelector("#form-validation-submit");
-
 
 // The username input
 function validateUsername(event) {
@@ -39,7 +42,6 @@ function validateUsername(event) {
 }
 
 inputUsername.addEventListener("input", validateUsername);
-
 
 // The password input
 function validatePassword(event) {
