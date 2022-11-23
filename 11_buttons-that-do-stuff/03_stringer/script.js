@@ -1,34 +1,24 @@
 "use strict"; // We want to get some help from the strict mode to catch errors.
 
-/*
- * 3. Stringer
- *
- * Do this one in smaller groups or alone, uncommenting the code as you go.
- *
- * TASK: You will need to:
- *   - Make a variable for the "add" button
- *   - Make variable for the paragraph where the strings shows up
- *   - Add an pointerdown event to the "add" button where you
- *     + Update the `stringerString`
- *     + Update the paragraph where the string shows up using `stringerString`
- *
- *  Additionaly, if you have time, you should also
- *   - Add an onclick event for the "clear button", which,
- *     + Clears `stringerString` by setting it to the empty string
- *     + Clears the paragraph where the string shows up
- */
-
-let stringerString = "S";
+let words = "";
 const characterInput = document.querySelector("#stringer-input-character");
+const wordsDisplay = document.querySelector("#stringer-output-paragraph");
 
-/*
+const addButton = document.querySelector("#stringer-input-button-add");
+const clearButton = document.querySelector("#stringer-input-button-clear");
 
-function ___() {
-    let newCharacter = characterInput.value;  // Get the character that is in the input
-    ___.innerHTML = ___; // Update the output paragarph element
+function typer() {
+  const newWords = characterInput.value; //getting the value of the character
+  words = words + newWords; //adding it to the variable
 
-    characterInput.value = "";  // Clear the input
+  wordsDisplay.innerHTML = words; //setting it to the display
+  characterInput.value = ""; //clearing the input field
 }
 
-  ___.addEventListener("pointerdown", ___);
-*/
+function clear() {
+  words = ""; //emptying the string
+  wordsDisplay.innerHTML = words; //displaying the string
+}
+
+addButton.addEventListener("pointerdown", typer);
+clearButton.addEventListener("pointerdown", clear);
