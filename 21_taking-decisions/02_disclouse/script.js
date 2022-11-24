@@ -1,12 +1,3 @@
-/*
- * 2. Disclosure
- *
- * TASK: fill in the blanks to make the widget work.
- * We are looking for a behaviour where a click on the disclosure header
- * reveals the text in the disclosure panel. Follow the comments!
- *
- */
-
 // This functions will make the ___ placeholder not error. You can ignore it.
 const ___ = (..._) => console.log("There are still gaps in the file!");
 
