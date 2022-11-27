@@ -118,8 +118,12 @@ function supportDisclosure() {
 // Now, register the listener above to the `pointerdown` event on the
 // `supportHeader`. You will have to write all of this on your own,
 // but remember, it is _very_ similiar to the first one. */
+
+
+/*
 refundHeader.addEventListener("pointerdown", refundDisclosure);
 supportHeader.addEventListener("pointerdown", supportDisclosure);
+*/
 
 /* Challenge!
  * The two eventListener functions are more or less the same,
@@ -130,3 +134,23 @@ supportHeader.addEventListener("pointerdown", supportDisclosure);
  * HINT: `querySelector` can be "scoped" by
  *       running it of an element instead of document.
  */
+
+function toggleDisclosure(event) {
+  const header = event.target;
+
+  const chevronUp = header.querySelector(".chevron-up");
+  const chevronDown = header.querySelector(".chevron-down");
+  const panel = header.querySelector(".disclosure-panel");
+
+  if (elementIsHidden(panel)) {
+    showElement(panel);
+    hideElement(chevronDown);
+    showElement(chevronUp);
+  } else {
+    hideElement(panel);
+    showElement(chevronDown);
+    hideElement(chevronUp);
+  }
+}
+
+
