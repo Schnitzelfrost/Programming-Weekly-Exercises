@@ -1,6 +1,6 @@
-/* 
+/*
  * 3. EULA, expert mode
- * 
+ *
  * Legal has decreed that we have to make sure that ours users indeed
  * read the EULA, whatever it takes.
  *
@@ -9,7 +9,7 @@
  * EULA, character by charcter. Only problem is, the EULA fades out of
  * view once the textarea is in focus.
  *
- * TASK: 
+ * TASK:
  * - Set the first part of the EULA (the variable `eula`) as the content of `eulaText`.
  * - Make the EULA fade in and out:
  *   + Add event listeners for "focus" (selecting) and "focusout" (de-selecting) to `eulaTextArea`.
@@ -25,17 +25,18 @@
  * - Add a visible counter the amount of letters the user has typed. (HINT: strings have a .length property)
  * - Add a max number of letters that is just a bit over the total amount of the eula, we don't want to give the user too much leeway for mistakes. (HINT: There is an event called "input" that fires when the users edits the input of a <textarea>, <select> or <input>.)
  * - Reset the textArea if the user hits he max.
- *  
+ *
  */
 
 // This is the first part of the EULA
-const eula = "The Licence Agreement sets forth the terms and conditions under which the Customer may (1) use the Licensor's proprietary softare (the Licensed Softare/Subscribed Software) that is specifically licensed to the Customer persuant to the Quote.";
+const eula =
+  "The Licence Agreement sets forth the terms and conditions under which the Customer may (1) use the Licensor's proprietary softare (the Licensed Softare/Subscribed Software) that is specifically licensed to the Customer persuant to the Quote.";
 
 // This is the second part of the EULA, which is used for the advanced level exercise
-const eula2 = "The Licence Agreement sets forth that the Customer must (2) use the user documentation that Licensor makes generally available in hard copy or electronic form to its general customer base in conjunction with the licensing of such Applications.";
+const eula2 =
+  "The Licence Agreement sets forth that the Customer must (2) use the user documentation that Licensor makes generally available in hard copy or electronic form to its general customer base in conjunction with the licensing of such Applications.";
 
 let activeEula = eula;
-
 
 const eulaText = document.querySelector("#eula-text");
 const eulaButtonCancel = document.querySelector("#eula-button-cancel");
@@ -43,7 +44,6 @@ const eulaButtonConfirm = document.querySelector("#eula-button-confirm");
 const eulaTextArea = document.querySelector("#eula-input-textarea");
 
 eulaText.innerHTML = eula;
-
 
 /* These two events prevent the user from selecting the EULA text by
    stopping the regular/default event behaviour of "selectionchange"
@@ -57,7 +57,6 @@ eulaText.addEventListener("pointerdown", function (event) {
   event.preventDefault();
 });
 
-
 /* Focus/focusout events for when the user selects `eulaTextArea` */
 eulaTextArea.addEventListener("focus", function (event) {
   eulaText.classList.add("eula-dim");
@@ -66,8 +65,6 @@ eulaTextArea.addEventListener("focus", function (event) {
 eulaTextArea.addEventListener("focusout", function (event) {
   eulaText.classList.remove("eula-dim");
 });
-
-
 
 /* This is where you should add events for buttons. */
 function submitEula() {
@@ -85,9 +82,6 @@ function submitEula() {
 }
 
 eulaButtonConfirm.addEventListener("pointerdown", submitEula);
-
-
-
 
 /* CHALLENGE:
 
