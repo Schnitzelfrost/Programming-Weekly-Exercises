@@ -148,3 +148,24 @@ makeTab(
   makePanel("This is another tab with a panel. A fish lives here 🐠"),
   false
 );
+
+makeTab(
+  3,
+  "Second",
+  makePanel("This is another tab with a panel. A fish lives here 🐠"),
+  false
+);
+
+makeTab(
+  4,
+  "Second",
+  makePanel("This is another tab with a panel. A fish lives here 🐠"),
+  false
+);
+
+makeTab(
+  5,
+  "Second",
+  makePanel("This is another tab with a panel. A fish lives here 🐠"),
+  false
+);
