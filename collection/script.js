@@ -17,3 +17,24 @@ function counterDown() {
 
 buttonUp.addEventListener("pointerdown", counterUp);
 buttonDown.addEventListener("pointerdown", counterDown);
+
+//Juggler
+const clown = "🤡";
+
+const buttonLeft = document.querySelector("#juggler-body-button-first");
+const buttonRight = document.querySelector("#juggler-body-button-second");
+
+function jugglerLeft() {
+  buttonLeft.innerHTML = "";
+  buttonRight.innerHTML = clown;
+}
+
+function jugglerRight() {
+  buttonRight.innerHTML = "";
+  buttonLeft.innerHTML = clown;
+}
+
+buttonLeft.addEventListener("pointerdown", jugglerLeft);
+buttonRight.addEventListener("pointerdown", jugglerRight);
+
+
