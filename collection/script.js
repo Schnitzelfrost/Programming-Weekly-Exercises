@@ -37,4 +37,7 @@ function jugglerRight() {
 buttonLeft.addEventListener("pointerdown", jugglerLeft);
 buttonRight.addEventListener("pointerdown", jugglerRight);
 
+//Stringer
 
+const stringerText = document.querySelector("#stringer-input-character");
+const stringerAdd = document.querySelector("#")
